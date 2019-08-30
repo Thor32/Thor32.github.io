@@ -1,0 +1,1891 @@
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: #519681;
+  color: #fff;
+}
+
+::-moz-selection {
+  background: #519681;
+  color: #fff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+  font-family: "Roboto Condensed", sans-serif;
+  background-color: #fff;
+}
+
+/* Bar at the top of page  */
+header {
+  background: #3c695c;
+  margin-bottom: 0px;
+  padding-top: 7px;
+  height: 43px;
+}
+
+header h3 {
+  text-align: left;
+  font-size: 15px;
+  margin-top: 7px;
+  margin-left: 23%;
+  color: #fff;
+}
+
+
+
+
+
+/* Below header */
+.logo-1 {
+  width: 100%;
+  max-width: 8%;
+  height: auto;
+  float: left;
+  position: relative;
+  margin-left: 3%;
+  bottom: 180px;
+  background: #fefefe;
+  border: 2px solid #3c695c;
+  border-radius: 50%;
+  opacity: 0.7;
+}
+
+@media only screen and (max-width: 1660px) {
+  .logo-1 {
+    display: none;
+  }
+}
+
+
+.container {
+  width: 1300px;
+  margin: 0 auto;
+  background-image: url("../Images/Banner/meet-veterinarians-banner.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 1px solid #3c695c;
+  height: 230px;
+  border-radius: 50px;
+}
+
+@media only screen and (max-width: 1300px){
+  .container {
+    width: 100%;
+    border-radius: 0;
+  }
+}
+
+
+
+
+
+/* Navigation bar */
+nav {
+  background-color: #3c695c;
+  width: 1200px;
+  position: relative;
+  top: 0px;
+  margin: 0 auto;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.20), 0 2px 10px 0 rgba(0, 0, 0, 0.16);
+  z-index: 500;
+}
+
+@media only screen and (max-width: 1300px) {
+  nav {
+    width: 100%;
+  }
+}
+
+.nav-placeholder {
+  margin: 0 0 40px 0;
+}
+
+.fixed {
+  position: fixed;
+  top: 0px;
+  width: 1200px;
+  left: 50%;
+  margin-left: -600px;
+}
+
+@media only screen and (max-width: 1300px) {
+  .fixed {
+    width: 100%;
+    left: 0;
+    margin: 0;
+  }
+}
+
+nav ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.list-item {
+  display: inline-block;
+  margin-left: 6%;
+  padding: 15px 0;
+  position: relative;
+}
+
+
+.fa-cart-plus {
+  color: #aaaaaa;
+  position: relative;
+  margin-right: 4px;
+  font-size: 120%;
+}
+
+/* Navigation buttons */
+nav ul li a {
+  font-size: 18px;
+  color: aliceblue;
+  text-decoration: none;
+  padding: 0px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+
+@media only screen and (max-width: 1300px) {
+  nav ul li a {
+    font-size: 1.5vw;
+  }
+}
+
+
+nav ul li a:hover {
+  color: #5cad97;
+  text-decoration: none;
+}
+
+/* Navigation buttons animation */
+.hover:before {
+  content: "";
+  display: block;
+  height: 5px;
+  width: 80%;
+  background-color: #5cad97;
+
+  position: absolute;
+  width: 0%;
+  top: 5px;
+
+  transition: all ease-in-out 250ms;
+}
+
+.hover:hover::before {
+  width: 100%;
+}
+
+.current {
+  color: #5cad97;
+}
+
+.current:before {
+  content: "";
+  display: block;
+  height: 5px;
+  width: 100%;
+  background-color: #5cad97;
+  position: relative;
+  bottom: 5px;
+}
+
+
+/* nav dropdown menu */
+.nav-content {
+  position: absolute;
+  top: 49px;
+  overflow: hidden;
+  background-color: #2b584d;
+  max-height: 0;
+}
+
+.nav-content:active {
+  max-height: 400px;
+}
+
+.nav-sub {
+  padding: 13px 21px;
+}
+
+.nav-sub ul {
+  padding: 0;
+  margin: 0;
+  list-style-type:none;
+}
+
+.nav-sub ul li a {
+  display: inline-block;
+  padding: 0px;
+  width: 150px;
+  margin: 10px 0;
+  border-bottom: 2px dotted rgba(255, 255, 255, 0.267);
+}
+
+.nav-item:focus {
+  color: #519681;
+}
+
+.nav-item:focus ~ .nav-content {
+  max-height: 400px;
+}
+
+
+#nav-focus:focus {
+  color: #5cad97;
+  text-decoration: none;
+}
+
+#nav-focus:focus ~ .nav-content {
+  max-height: 400px;
+  -webkit-transition: max-height 0.4s ease-in;
+  -moz-transition: max-height 0.4s ease-in;
+  transition: max-height 0.4s ease-in;
+}
+
+
+
+
+
+
+
+
+
+/* Image slider */
+.decoration-line-index {
+  display: inline-block;
+  width: 100%;
+  border-bottom: 5px solid #3c695c;
+  position: relative;
+  top: 90px;
+  z-index: -5;
+}
+
+slider {
+  display: block;
+  width: 800px;
+  height: 250px;
+  background-color: rgba(150, 207, 155, 0.842);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+  position: relative;
+  bottom: 40px;
+  margin: 0 auto;
+  border: 5px solid #3c695c;
+}
+
+
+slider > * {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: rgba(150, 207, 155, 0.842);
+  animation: slide 25s infinite;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 800px){
+  slider {
+    width: 100%;
+  }
+}
+
+slide:nth-child(2) {
+  left: 0%;
+  animation-delay: 18s;
+  background-image: url("../Images/Image Slider/my.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+slide:nth-child(3) {
+  left: 0%;
+  animation-delay: 13s;
+  background-image: url("../Images/Image Slider/catadoption-lowres-06052-2x1-1.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+slide:nth-child(4) {
+  left: 0%;
+  animation-delay: 8s;
+  background-image: url("../Images/Image Slider/mie.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+slide:nth-child(5) {
+  left: 0%;
+  animation-delay: 3s;
+  background-image: url("../Images/Image Slider/iStock_000003050635Small.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+slide:nth-child(6) {
+  left: 0%;
+  animation-delay: -2s;
+  background-image: url("../Images/Image Slider/dogdays.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+@keyframes slide {
+  0% {
+    left: 100%;
+    width: 100%;
+  }
+  5% {
+    left: 0%;
+  }
+  25% {
+    left: 0%;
+  }
+  30% {
+    left: -100%;
+    width: 100%;
+  }
+  30.0001% {
+    left: -100%;
+    width: 0%;
+  }
+  100% {
+    left: 100%;
+    width: 0%;
+  }
+}
+
+
+
+
+
+
+.velkommen h2 {
+  font-family: "Roboto Slab", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  position: relative;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+  width: 100%;
+}
+
+.velkommen h3 {
+  font-family: "Satisfy", sans-serif;
+  font-size: 20px;
+  font-weight: normal;
+  font-style: italic;
+  position: relative;
+  text-align: center;
+  margin-bottom: 40px;
+  margin-top: 0;
+  color: #294940;
+}
+
+#introduction {
+  position: relative;
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 300px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+#introduction h4 {
+  font-size: 18px;
+  position: relative;
+  margin-bottom: 10px;
+  border-bottom: 1px solid black;
+  padding-bottom: 12px;
+}
+
+#introduction .main-segment {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-top: 0px;
+  padding-top: 0px;
+  position: relative;
+  color: #7c7c7c;
+}
+
+.fa-arrow-right {
+  color: #3c695c;
+  position: relative;
+  top: 2px;
+  font-size: 21px;
+  margin-left: 6px;
+}
+
+.float-left {
+  position: relative;
+  float: left;
+  width: 650px;
+  height: 600px;
+}
+
+@media only screen and (max-width: 1300px){
+  .float-left {
+    height: 400px;
+    width: 300px;
+  }
+}
+
+@media only screen and (max-width: 1020px){
+  .float-left {
+    height: 150px;
+    width: 100%;
+  }
+}
+
+#introduction .button {
+  position: relative;
+  left: -7px;
+}
+
+#introduction p a {
+  font-size: 18px;
+  text-decoration: none;
+  color: #4c7648;
+  margin-left: 6px;
+}
+
+#introduction p a:hover {
+  color: #5cad97;
+}
+
+#introduction p a:before {
+  content: "";
+  display: block;
+  height: 5px;
+  width: 80%;
+  background-color: #3c695c;
+
+  position: absolute;
+  margin-left: 6px;
+  width: 0%;
+  bottom: -7px;
+
+  transition: all ease-in-out 250ms;
+}
+
+#introduction p a:hover::before {
+  width: 93px;
+}
+
+
+
+
+
+/* Input Form */
+input[type="text"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 20px;
+  resize: none;
+}
+
+input[type="submit"] {
+  background-color: #3c695c;
+  color: white;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 60%;
+  margin-left: 60px;
+  font-size: 18px;
+}
+
+input[type="submit"]:hover {
+  background-color: #5cad97;
+}
+
+.form {
+  width: 100%;
+  max-width: 100%;
+  position: relative;
+  left: 3%;
+  width: 400px;
+  height: 625px;
+  float: right;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+@media only screen and (max-width: 1300px) {
+  .form {
+    display: none;
+  }
+}
+
+
+
+@media only screen and (max-width: 1300px) {
+  #kontakt-segment{
+    display: none;
+  }
+}
+
+
+
+
+
+#decoration-img {
+  width: 1100px;
+}
+
+#decoration-img img {
+  position: relative;
+  float: left;
+  margin-top: 13px;
+  width: auto;
+  height: 300px;
+  border: 5px solid #3c695c;
+}
+
+@media only screen and (max-width: 1300px){
+  #decoration-img img {
+    display: none;
+  }
+}
+
+#decoration-img-mobile img {
+  position: relative;
+  float: right;
+  margin: 4px;
+  width: auto;
+  height: 300px;
+  border: 5px solid #3c695c;
+}
+
+@media only screen and (min-width: 1300px){
+  #decoration-img-mobile img {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1020px){
+  #decoration-img-mobile img {
+    display: none;
+  }
+}
+
+
+
+
+
+
+
+#lower-body {
+  display: inline-block;
+  position: relative;
+  margin-top: 130px;
+  background: #f2f2f2;
+  width: 100%;
+  height: 1100px;
+  text-align: center;
+}
+
+@media only screen and (max-width: 1300px){
+  #lower-body{
+    height: 1950px;
+    margin-top: 0;
+  }
+}
+
+
+
+.icon-box {
+  display: inline-block;
+  background: #fff;
+  height: 350px;
+  width: 350px;
+  text-align: center;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.15);
+  z-index: 1;
+}
+
+#box {
+  position: relative;
+  top: 80px;
+  margin-left: 23px;
+  margin-top: 40px;
+}
+
+@media only screen and (max-width: 1300px){
+  #box{
+    margin-left: 0;
+    width: 90%;
+    left: 0;
+    height: 250px;
+  }
+}
+
+.icon-box img {
+  position: relative;
+}
+
+.icon-box h3 {
+  background: #fff;
+  padding: 0 10px;
+  width: 60%;
+  margin: 10px auto;
+  z-index: 2;
+  color: #3c695c;
+}
+
+/* Border gennem tekst */
+.icon-box h5 {
+  border-bottom: 2px double #7c7c7c;
+  opacity: 0.3;
+  position: relative;
+  bottom: 33px;
+  z-index: -1;
+}
+
+.icon-box p {
+  position: relative;
+  height: 45%;
+  width: 80%;
+  margin: -10px auto;
+  color: #7c7c7c;
+}
+
+.fa-hospital,
+.fa-heartbeat,
+.fa-comment-medical,
+.fa-laptop-medical,
+.fa-search-dollar,
+.fa-mail-bulk {
+  margin-top: 20px;
+  color: #3c695c;
+  font-size: 84px;
+}
+
+
+
+
+
+#food {
+  background-color: #3c695c;
+  color: #fff;
+  padding-top: 10px;
+  width: 100%;
+  height: auto;
+  position: relative;
+  text-align: left;
+  float: left;
+}
+
+@media only screen and (max-width: 1200px){
+  #food {
+    height: 390px;
+  }
+}
+
+@media only screen and (max-width: 1000px){
+  #food {
+    height: 500px;
+  }
+}
+
+#food-interior {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 1200px){
+  #food-interior {
+    width: 1000px;
+  }
+}
+
+@media only screen and (max-width: 1000px){
+  #food-interior {
+    width: 100%;
+  }
+}
+
+
+#food h1 {
+  position: relative;
+  
+  padding: 0 10px;
+  margin-top: 20px;
+  margin-bottom: 0;
+  font-family: "Roboto Slab", serif;
+  font-weight: 400;
+  font-size: 45px;
+}
+
+@media only screen and (max-width: 1000px){
+  #food h1 {
+    font-size: 40px;
+  }
+}
+
+#food h2 {
+  position: relative;
+  width: 45%;
+ 
+  padding: 0 10px;
+  margin-top: 0;
+  font-size: 24px;
+  font-family: "Roboto Slab", serif;
+  font-weight: 400;
+}
+
+#food p {
+  position: relative;
+
+  padding: 0 10px;
+  width: 50%;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+@media only screen and (max-width: 1000px){
+  #food p {
+    width: 100%;
+  }
+}
+
+.fa-arrow-circle-right {
+  color: #aaaaaa;
+  margin-right: 8px;
+}
+
+#food p a {
+  position: relative;
+  text-decoration: none;
+  color: #fff;
+}
+
+#food p a:hover {
+  color: #5cad97;
+  text-decoration: none;
+}
+
+/* link button animation */
+#food p a:before {
+  content: "";
+  display: block;
+  height: 5px;
+  width: 80%;
+  background-color: #5cad97;
+
+  position: absolute;
+  width: 0%;
+  top: 23px;
+
+  transition: all ease-in-out 250ms;
+}
+
+#food p a:hover::before {
+  width: 100%;
+}
+
+#food-1 {
+  position: relative;
+  right: 6%;
+  bottom: 60px;
+  float: right;
+  width: auto;
+  height: 350px;
+  z-index: 1;
+}
+
+#food-2 {
+  position: relative;
+  float: right;
+  
+  bottom: 40px;
+  width: auto;
+  height: 350px;
+  z-index: 2;
+}
+
+#food-3 {
+  position: relative;
+  float: right;
+  left: 6%;
+  bottom: 60px;
+  width: auto;
+  height: 350px;
+  z-index: 1;
+}
+
+@media only screen and (max-width: 1000px){
+  #food-1,#food-2,#food-3 {
+    height: 250px;
+    top: 150px;
+  }
+}
+
+@media only screen and (max-width: 1000px){
+  #food-2 {
+    top: 180px;
+  }
+}
+
+
+
+
+#above-footer {
+  text-align: center;
+}
+
+#animal-footer img {
+  display: inline-block;
+  position: relative;
+  padding-top: 200px;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+
+
+
+/* Footer */
+footer {
+  color: #fefefe;
+  position: absolute;
+  border-top: 20px solid #f2f2f2;
+  background: #353535;
+  padding-top: 40px;
+  margin-top: 0px;
+  z-index: 2;
+  width: 100%;
+  height: 302px;
+}
+
+footer h4 {
+  color: #5cac94;
+}
+
+footer div {
+  float: left;
+  width: 20%;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+#footer-width {
+  width: 80%;
+}
+
+@media only screen and (max-width: 1300px){
+  #footer-width {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 1200px){
+  #footer-width {
+    width: 100%;
+  }
+}
+
+.besøgstider {
+  margin-left: 20%;
+}
+
+@media only screen and (max-width: 1300px){
+  .besøgstider {
+    margin-left: 15%;
+  }
+}
+
+@media only screen and (max-width: 1200px){
+  .besøgstider {
+    margin-left: 10%;
+  }
+}
+
+footer table {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+}
+
+
+.fa-instagram,
+ .fa-facebook,
+  .fa-twitter {
+  position: relative;
+  color: #519681;
+  font-size: 50px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.fa-instagram:hover,
+ .fa-facebook:hover,
+  .fa-twitter:hover {
+  opacity: 0.5;
+}
+
+#trademark {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 12px;
+  background: #242424;
+  padding-top: 1px;
+}
+
+#trademark p {
+  margin: 0;
+  padding: 6px 0;
+}
+
+
+
+
+/* Om klinikken */
+#wrapper {
+  width: 60%;
+  margin: 0 auto;
+}
+
+#wrapper h2 {
+  font-family: "Roboto Slab";
+  font-size: 24px;
+  margin-top: 40px;
+}
+
+#wrapper h3 {
+  font-family: "Roboto Condensed";
+  font-size: 16px;
+  margin-bottom: 0;
+  color: #3c695c;
+}
+
+#wrapper p {
+  width: 100%;
+  color: #7c7c7c;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+#wrapper p a {
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  background: #3c695c;
+  padding: 8px 40px;
+  border-radius: 5px;
+  margin-left: 180px;
+}
+
+#wrapper p a:hover {
+  color: #fefefe;
+  background: #5cad97;
+  text-decoration: none;
+}
+
+#entrance-img {
+  float: right;
+  height: auto;
+  width: 27vw;
+  margin-bottom: 15px;
+  margin-left: 20px;
+  border: 5px solid #3c695c;
+}
+
+@media only screen and (max-width: 1300px){
+  #entrance-img {
+    width: 400px;
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (max-width: 1024px){
+  #entrance-img {
+    width: 300px;
+    margin-bottom: 0;
+  }
+}
+
+
+
+/* Personale */
+#personale-header {
+  width: 1000px;
+  background: #3c695c;
+  padding-top: 10px;
+  padding-bottom: 40px;
+  color: aliceblue;
+  margin: 0 auto;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  z-index: 3;
+  position: relative;
+  top: -50px;
+}
+
+@media only screen and (max-width: 1000px){
+  #personale-header {
+    width: 800px;
+  }
+}
+
+@media only screen and (max-width: 800px){
+  #personale-header {
+    width: 600px;
+  }
+}
+
+.decoration-line-personale {
+  display: inline-block;
+  width: 100%;
+  border-bottom: 5px solid #3c695c;
+  position: relative;
+  top: 52px;
+  z-index: -5;
+}
+
+
+#personale-header h2 {
+  font-size: 22px;
+  text-align: center;
+  font-family: "Roboto Slab";
+}
+
+#personale-header p {
+  font-family: "Roboto Condensed";
+  width: 900px;
+  margin: 0 auto;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+@media only screen and (max-width: 1000px){
+  #personale-header p {
+    width: 700px;
+  }
+}
+
+@media only screen and (max-width: 800px){
+  #personale-header p {
+    width: 500px;
+  }
+}
+
+#page-jump {
+  width: 600px;
+  text-align: center;
+}
+
+#page-jump a {
+  display: inline-block;
+  font-size: 18px;
+  color: #ffffff;
+  text-decoration: none;
+  margin-left: 20px;
+  margin-top: 10px;
+  background: #5cac94;
+  border-radius: 15px;
+  padding: 2px 10px;
+}
+
+#page-jump a:hover {
+  background: #4a8875;
+}
+
+@media only screen and (min-width: 800px){
+  #page-jump {
+    display: none;
+  }
+}
+
+.profile {
+  background-color: #f2f2f2;
+  height: 800px;
+  padding-top: 80px;
+  width: 1300px;
+  margin: 0 auto;
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+@media only screen and (max-width: 1300px){
+  .profile {
+    width: 800px;
+    height: 720px;
+  }
+}
+
+@media only screen and (max-width: 800px){
+  .profile {
+    height: 1180px;
+    width: 600px;
+  }
+}
+
+#border-radius {
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+}
+
+#height-bot {
+  height: 900px;
+}
+
+@media only screen and (max-width: 1300px){
+  #height-bot {
+    height: 850px;
+  }
+}
+
+@media only screen and (max-width: 800px){
+  #height-bot {
+    height: 1350px;
+  }
+}
+
+.profile h4 {
+  font-family: "Roboto Slab";
+  font-size: 20px;
+  text-align: center;
+  margin: 10px 0;
+  color: #3c695c
+}
+
+.profile h5 {
+  font-family: "Roboto Condensed";
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-style: italic;
+}
+
+.profile p {
+  width: 540px;
+  border-top: 1px solid #aaaaaa;
+  padding-top: 20px;
+  color: #7c7c7c;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+@media only screen and (max-width: 1300px){
+  .profile p {
+    width: 300px;
+  }
+}
+
+@media only screen and (max-width: 800px){
+  .profile p {
+    margin: 0 auto;
+    padding-bottom: 60px;
+    width: 100%;
+  }
+}
+
+.profile img {
+  width: auto;
+  height: 375px;
+  border: 5px solid #3c695c;
+  position: relative;
+  left: 80px;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.15);
+}
+
+@media only screen and (max-width: 1300px){
+  .profile img {
+    height: 200px;
+    left: 50px;
+  }
+}
+
+@media only screen and (max-width: 800px){
+  .profile img {
+    left: 120px;
+  }
+}
+
+#profile-1 {
+  float: left;
+}
+
+#profile-2 { 
+  float: right;
+}
+
+#profile-3 {
+  float: left;
+}
+
+#profile-4 {
+  float: right;
+}
+
+@media only screen and (max-width: 800px){
+  #profile-1,#profile-2,#profile-3,#profile-4 {
+    float: none;
+  }
+}
+
+
+
+
+
+/* Behandlinger */
+
+/* Sundhedstjek */
+
+@media only screen and (max-width: 1500px){
+  #wrapper-sundhedstjek {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+
+#wrapper-sundhedstjek h2 {
+  font-family: "Roboto Slab";
+  font-size: 24px;
+  margin-left: 285px;
+  margin-top: 40px;
+}
+
+@media only screen and (max-width: 1500px){
+  #wrapper-sundhedstjek h2 {
+   margin-left: 0;
+   text-align: center;
+  }
+}
+
+
+#wrapper-sundhedstjek p {
+  width: 55%;
+  margin-left: 285px;
+  color: #7c7c7c;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+
+
+@media only screen and (max-width: 1500px){
+  #wrapper-sundhedstjek p {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+
+#sundhedstjek-img {
+  float: right;
+  width: auto;
+  height: 450px;
+  margin-right: 285px;
+  margin-left: 50px;
+  margin-bottom: 30px;
+  border: 5px solid #3c695c;
+}
+
+@media only screen and (max-width: 1500px){
+  #sundhedstjek-img {
+    display: none;
+
+
+    width: 400px;
+    height: auto;
+    margin: 0 auto;
+    float: none;
+  }
+}
+
+.wrapper-img {
+  text-align: center;
+}
+
+@media only screen and (min-width: 1500px){
+  .wrapper-img {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1500px){
+  #sundhedstjek-img-mobile {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1500px){
+  #sundhedstjek-img-mobile {
+    border: 5px solid #3c695c;
+    width: 400px;
+    height: auto;
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
+}
+
+
+/* Neutralisering */
+@media only screen and (max-width: 1500px){
+  #wrapper-neutralisation {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+#wrapper-neutralisation h2 {
+  font-family: "Roboto Slab";
+  font-size: 24px;
+  margin-left: 285px;
+  margin-top: 40px;
+}
+
+@media only screen and (max-width: 1500px){
+  #wrapper-neutralisation h2 {
+   margin-left: 0;
+   text-align: center;
+  }
+}
+
+#wrapper-neutralisation h3 {
+  font-family: "Roboto Condensed";
+  font-size: 16px;
+  margin-left: 285px;
+  margin-bottom: 0;
+  color: #3c695c;
+}
+
+@media only screen and (max-width: 1500px){
+  #wrapper-neutralisation h3 {
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+
+#wrapper-neutralisation p {
+  width: 60%;
+  margin-left: 285px;
+  margin-top: 5px;
+  color: #7c7c7c;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+@media only screen and (max-width: 1500px){
+  #wrapper-neutralisation p {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+
+#neutralisation-img {
+  float: right;
+  width: auto;
+  height: 375px;
+  margin-right: 285px;
+  margin-left: 50px;
+  margin-bottom: 30px;
+  border: 5px solid #3c695c;
+}
+
+@media only screen and (max-width: 1500px){
+  #neutralisation-img {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1500px){
+  .wrapper-img {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1500px){
+  #neutralisation-img-mobile {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1500px){
+  #neutralisation-img-mobile {
+    border: 5px solid #3c695c;
+    width: 400px;
+    height: auto;
+    margin-bottom: 20px;
+    margin-top: 5px;
+  }
+}
+
+.margin-pushdown {
+  margin-bottom: 100px;
+}
+
+
+
+
+/* Operationer */
+@media only screen and (max-width: 1550px){
+  #wrapper-operation {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+#wrapper-operation h2 {
+  font-family: "Roboto Slab";
+  font-size: 24px;
+  margin-left: 285px;
+  margin-top: 40px;
+}
+
+@media only screen and (max-width: 1550px){
+  #wrapper-operation h2 {
+   margin-left: 0;
+   text-align: center;
+  }
+}
+
+#wrapper-operation h3 {
+  font-family: "Roboto Condensed";
+  font-size: 16px;
+  margin-left: 285px;
+  margin-bottom: 0;
+  color: #3c695c;
+}
+
+@media only screen and (max-width: 1550px){
+  #wrapper-operation h3 {
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+
+#wrapper-operation p {
+  width: 45%;
+  margin-left: 285px;
+  margin-top: 5px;
+  color: #7c7c7c;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+@media only screen and (max-width: 1550px){
+  #wrapper-operation p {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+
+#operation-img {
+  float: right;
+  width: auto;
+  height: 500px;
+  margin-right: 285px;
+  margin-left: 50px;
+  margin-bottom: 30px;
+  border: 5px solid #3c695c;
+}
+
+
+@media only screen and (max-width: 1550px){
+  #operation-img {
+    display: none;
+  }
+}
+
+.wrapper-img-operation {
+  text-align: center;
+}
+
+@media only screen and (min-width: 1550px){
+  .wrapper-img-operation {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1550px){
+  #operation-img-mobile {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1550px){
+  #operation-img-mobile {
+    border: 5px solid #3c695c;
+    width: 400px;
+    height: auto;
+    margin-bottom: 25px;
+    margin-top: 5px;
+  }
+}
+
+
+/* Tandbehandling */
+@media only screen and (max-width: 1700px){
+  #wrapper-tandbehandling {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+#wrapper-tandbehandling h2 {
+  font-family: "Roboto Slab";
+  font-size: 24px;
+  margin-left: 285px;
+}
+
+@media only screen and (max-width: 1700px){
+  #wrapper-tandbehandling h2 {
+   margin-left: 0;
+   text-align: center;
+  }
+}
+
+#wrapper-tandbehandling p {
+  width: 32%;
+  margin-left: 285px;
+  color: #7c7c7c;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+@media only screen and (max-width: 1800px){
+  #wrapper-tandbehandling p {
+    width: 55%;
+  }
+}
+
+@media only screen and (max-width: 1700px){
+  #wrapper-tandbehandling p {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+
+#tandbehandling-img {
+  float: right;
+  width: auto;
+  height: 410px;
+  margin-right: 285px;
+  margin-left: 50px;
+  margin-bottom: 10px;
+  border: 5px solid #3c695c;
+}
+
+@media only screen and (max-width: 1700px){
+  #tandbehandling-img {
+    display: none;
+  }
+}
+
+.wrapper-img-tandbehandling {
+  text-align: center;
+}
+
+
+@media only screen and (min-width: 1700px){
+  .wrapper-img-tandbehandling {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1700px){
+  #tandbehandling-img-mobile {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1700px){
+  #tandbehandling-img-mobile {
+    border: 5px solid #3c695c;
+    width: 450px;
+    height: auto;
+    margin-bottom: 25px;
+    margin-top: 25px;
+  }
+}
+
+/* Afføringsprøver */
+.wrapper-text h2 {
+  width: 50%;
+  margin: 0 auto;
+  font-family: "Roboto Slab";
+  font-size: 24px;
+  text-align: left;
+}
+
+.wrapper-text h3 {
+  width: 50%;
+  font-family: "Roboto Condensed";
+  font-size: 16px;
+  margin: 0 auto;
+  padding-top: 25px;
+  color: #3c695c;
+}
+
+.wrapper-text p {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 5px;
+  color: #7c7c7c;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.padding-pushdown {
+  padding-bottom: 100px;
+}
+
+/* Hjemmebesøg */
+
+#wrapper-hjemmebesøg h2 {
+  font-family: "Roboto Slab";
+  font-size: 24px;
+  margin-left: 285px;
+  margin-top: 40px;
+}
+
+@media only screen and (max-width: 1700px){
+  #wrapper-hjemmebesøg h2 {
+   margin-left: 0;
+   text-align: center;
+  }
+}
+
+#wrapper-hjemmebesøg h3 {
+  font-family: "Roboto Condensed";
+  font-size: 16px;
+  margin-left: 285px;
+  margin-bottom: 0;
+  color: #3c695c;
+}
+
+@media only screen and (max-width: 1700px){
+  #wrapper-hjemmebesøg h3 {
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+
+#wrapper-hjemmebesøg p {
+  width: 30%;
+  margin-left: 285px;
+  margin-top: 5px;
+  color: #7c7c7c;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+@media only screen and (max-width: 1700px){
+  #wrapper-hjemmebesøg p {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+
+#hjemmebesøg-img {
+  float: right;
+  width: auto;
+  height: 900px;
+  margin-right: 285px;
+  margin-left: 40px;
+  margin-bottom: 20px;
+  border: 5px solid #3c695c;
+}
+
+@media only screen and (max-width: 1700px){
+  #hjemmebesøg-img {
+    display: none;
+  }
+}
+
+.wrapper-img-hjemmebesøg {
+  text-align: center;
+}
+
+
+@media only screen and (min-width: 1700px){
+  .wrapper-img-hjemmebesøg {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1700px){
+  #hjemmebesøg-img-mobile {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1700px){
+  #hjemmebesøg-img-mobile {
+    border: 5px solid #3c695c;
+    width: 500px;
+    height: auto;
+    margin-bottom: 25px;
+    margin-top: 25px;
+  }
+}
+
+/* Aflivning */
+.wrapper-text ul li {
+  width: 50%;
+  margin: 0 auto;
+  color: #7c7c7c;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.wrapper-text ul li a {
+  color: #519681;
+}
+
+.padding-pushdown {
+  padding-bottom: 100px;
+}
+
+
+/* Priser */
+.table-style {
+  width: 60%;
+  margin: 0 auto;
+  padding-bottom: 50px;
+}
+
+.table-style h2 {
+  font-family: "Roboto Slab";
+  font-size: 22px;
+  text-align: center;
+  border-bottom: 2px solid #000;
+  padding-bottom: 15px;
+}
+
+.table-style th {
+  width: 410px;
+  font-family: "Roboto Slab";
+  font-size: 16px;
+  color: #3c695c;
+}
+
+.table-style tr {
+  margin: 0 auto;
+  text-align: left;
+}
+
+.table-style td {
+  padding: 10px 0;
+}
+
+.table-color {
+  background: #f2f2f2;
+  padding: 5px 15px;
+}
+
+#table-tandrensning td, th {
+  width: 600px;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.align-center {
+  text-align: center;
+}
+
+
+/* Kontakt */
+#kontakt {
+  width: 50%;
+  margin: 0 auto;
+}
+
+#kontakt h2 {
+  font-family: "Roboto slab";
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #3c695c;
+}
+
+#kontakt-paragraph {
+  width: 70%;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  color: #7c7c7c;
+}
+
+@media only screen and (max-width: 1300px){
+  #kontakt-paragraph {
+    width: 100%;
+  }
+}
+
+#kontakt-center {
+  float: right;
+  width: 50%;
+  margin-bottom: 55px;
+}
+
+#kontakt-center p {
+  text-align: center;
+  margin: 7px 0;
+}
+
+.table-center {
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  float: left;
+  width: 50%;
+}
+
+.table-center table {
+  margin: 0 auto;
+}
+
+
+
+.mapouter {
+  position: relative;
+  text-align: right;
+  height: 400px;
+  width: 800px;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 800px){
+  .mapouter {
+    display: none;
+  }
+}
+
+.gmap_canvas {
+  overflow: hidden;
+  background: none !important;
+  height: 400px;
+  width: 800px;
+  border: 5px solid #3c695c;
+}
