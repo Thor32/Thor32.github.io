@@ -7,4 +7,4 @@ Jeg startede med meget basis-viden omkring HTML og CSS, og endte ud med at proje
 
 Jeg er stolt af hvad det endte som, og håber i vil tjekke det ud.
 
-(OBS: desværre er jeg meget ny til git og github, og derfor kan der være ting som margins og billeder som ikke virker når man kigger på min side gennem gitpages, jeg har ikke fundet hvad det skyldes)
+(OBS: desværre er jeg meget ny til git og github, og derfor kan der være ting som margins og billeder som ikke virker når man kigger på min side gennem gitpages, jeg har ikke fundet hvad det skyldes. Hvis noget slet ikke virker vil jeg henvise til at downloade filerne lokalt)
