@@ -68,7 +68,7 @@ header h3 {
 .container {
   width: 1300px;
   margin: 0 auto;
-  background-image: url("../Images/Banner/meet-veterinarians-banner.jpg");
+  background-image: url("../images/Banner/meet-veterinarians-banner.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -306,7 +306,7 @@ slider > * {
 slide:nth-child(2) {
   left: 0%;
   animation-delay: 18s;
-  background-image: url("../Images/Image Slider/my.jpg");
+  background-image: url("../images/Image Slider/my.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -314,7 +314,7 @@ slide:nth-child(2) {
 slide:nth-child(3) {
   left: 0%;
   animation-delay: 13s;
-  background-image: url("../Images/Image Slider/catadoption-lowres-06052-2x1-1.jpg");
+  background-image: url("../images/Image Slider/catadoption-lowres-06052-2x1-1.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -322,7 +322,7 @@ slide:nth-child(3) {
 slide:nth-child(4) {
   left: 0%;
   animation-delay: 8s;
-  background-image: url("../Images/Image Slider/mie.jpg");
+  background-image: url("../images/Image Slider/mie.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -330,7 +330,7 @@ slide:nth-child(4) {
 slide:nth-child(5) {
   left: 0%;
   animation-delay: 3s;
-  background-image: url("../Images/Image Slider/iStock_000003050635Small.jpg");
+  background-image: url("../images/Image Slider/iStock_000003050635Small.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -338,7 +338,7 @@ slide:nth-child(5) {
 slide:nth-child(6) {
   left: 0%;
   animation-delay: -2s;
-  background-image: url("../Images/Image Slider/dogdays.jpg");
+  background-image: url("../images/Image Slider/dogdays.jpg");
   background-size: cover;
   background-position: center;
 }
