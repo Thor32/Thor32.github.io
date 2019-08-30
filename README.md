@@ -1,2 +1,5 @@
-Dette er min første hjemmeside hvilket jeg har brugt ca 2 måneder på at lave fra bunden.
-Arresøgade Dyreklinik er en fiktiv dyrlæge.
+Tak for interessen.
+
+Dette er mit primære projekt som er en hjemmeside dedikeret til en fiktiv dyrlæge.
+
+Jeg har brugt omkring halvanden måned på den, og har uden tvivl været den største læringsoplevelse i HTML/CSS/JS.
