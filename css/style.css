@@ -654,6 +654,12 @@ input[type="submit"]:hover {
   }
 }
 
+@media only screen and (max-width: 900px){
+  #box{
+    width: 90%;
+  }
+}
+
 .icon-box img {
   position: relative;
 }
@@ -686,6 +692,12 @@ input[type="submit"]:hover {
   width: 80%;
   margin: -10px auto;
   color: #7c7c7c;
+}
+
+@media only screen and (max-width: 900px){
+  .icon-box p {
+    width: 90%;
+  }
 }
 
 .fa-hospital,
