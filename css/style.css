@@ -618,8 +618,13 @@ input[type="submit"]:hover {
 
 @media only screen and (max-width: 1300px){
   #lower-body{
-    height: 1950px;
     margin-top: 0;
+  }
+}
+
+@media only screen and (max-width: 1150px){
+  #lower-body{
+    height: 1950px;
   }
 }
 
@@ -640,10 +645,10 @@ input[type="submit"]:hover {
   margin-top: 40px;
 }
 
-@media only screen and (max-width: 1300px){
+@media only screen and (max-width: 1150px){
   #box{
     margin-left: 0;
-    width: 90%;
+    width: 80%;
     left: 0;
     height: 250px;
   }
