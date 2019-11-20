@@ -1,4 +1,3 @@
-Tak for interessen.
 
 Dette er mit primære projekt som er en hjemmeside dedikeret til en fiktiv dyrlæge.
 
